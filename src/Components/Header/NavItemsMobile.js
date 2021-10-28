@@ -78,7 +78,11 @@ const NavItemsMobile = ({ className }) => {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        <img src="./images/icon-hamburger.svg" alt="" />
+        {!open ? (
+          <img src="./images/icon-hamburger.svg" alt="" />
+        ) : (
+          <img src="./images/icon-close.svg" alt="" />
+        )}
       </IconButton>
       <Popover
         open={open}
