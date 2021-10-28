@@ -19,6 +19,14 @@ const useStyles = makeStyles((theme) => {
     dropDownCommon: {
       display: "none",
     },
+    loginButton: {
+      color: "hsl(356, 100%, 66%)  !important",
+      padding: "0.6rem 2rem !important",
+      background: "white !important",
+      borderRadius: "20px !important",
+      border: "none !important",
+      textTransform: "capitalize !important",
+    },
   };
 });
 const NavItems = ({ className }) => {
@@ -47,17 +55,11 @@ const NavItems = ({ className }) => {
       </Box>
 
       <Box display="flex" flexDirection="row">
-        <Button sx={{ mr: 2, color: "white" }}>Login</Button>
-        <Button
-          variant="outlined"
-          sx={{
-            mr: 2,
-            color: "hsl(353, 100%, 62%)",
-            background: "white",
-            borderRadius: "20px",
-          }}
-        >
-          Company
+        <Button sx={{ mr: 2, color: "white", textTransform: "capitalize" }}>
+          Login
+        </Button>
+        <Button variant="outlined" className={styles.loginButton}>
+          Sign Up
         </Button>
       </Box>
     </Container>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { makeStyles } from "@mui/styles";
 import {
   Container,
   IconButton,
@@ -7,11 +7,36 @@ import {
   MenuItem,
   Popover,
   Typography,
+  Divider,
+  Button,
 } from "@mui/material";
 import MenuButtonMobile from "./menuButtonMobile";
+
+const useStyles = makeStyles((theme) => {
+  return {
+    boxContainer: {
+      width: "80vw",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center !important",
+      padding: "1rem !important",
+    },
+    loginButton: {
+      color: "white !important",
+      padding: "0.6rem 2rem !important",
+      background:
+        "linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%))",
+      borderRadius: "20px !important",
+      border: "none !important",
+      textTransform: "capitalize !important",
+    },
+  };
+});
+
 const NavItemsMobile = ({ className }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+  const styles = useStyles();
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -58,6 +83,7 @@ const NavItemsMobile = ({ className }) => {
       <Popover
         open={open}
         anchorEl={anchorEl}
+        elevation={4}
         anchorReference="anchorPosition"
         anchorPosition={{ top: 100, left: 0 }}
         onClose={handleClose}
@@ -67,21 +93,29 @@ const NavItemsMobile = ({ className }) => {
         }}
         sx={{
           padding: 0,
+          overflow: "auto !important",
         }}
       >
-        <Box
-          sx={{
-            width: "89vw",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            padding: "1rem !important",
-          }}
-        >
+        <Box className={styles.boxContainer}>
           {navItems.map((navItem) => (
             <MenuButtonMobile item={navItem} />
           ))}
-          {/* <MenuButtonMobile /> */}
+        </Box>
+        <Divider variant="middle" />
+        <Box className={styles.boxContainer}>
+          <Button sx={{ color: "#415869 !important" }}>Login</Button>
+          <Button
+            variant="outlined"
+            className={styles.loginButton}
+            // sx={{
+            //   color: "white",
+            //   background:
+            //     "linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%))",
+            //   borderRadius: "20px",
+            // }}
+          >
+            Sign up
+          </Button>
         </Box>
       </Popover>
     </Container>

@@ -47,6 +47,7 @@ const MenuButton = ({ menuItem }) => {
         onClick={handleClick}
         className={styles.navItem}
         endIcon={open ? upIcon : downIcon}
+        sx={{ textTransform: "capitalize" }}
       >
         {menuItem["heading"]}
       </Button>

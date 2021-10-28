@@ -14,6 +14,10 @@ const useStyles = makeStyles((theme) => {
       backgroundSize: "175rem",
       backgroundRepeat: "no-repeat",
       objectFit: "cover",
+      [theme.breakpoints.down("md")]: {
+        backgroundSize: "80rem !important",
+        backgroundPosition: "20% center  !important",
+      },
     },
   };
 });
