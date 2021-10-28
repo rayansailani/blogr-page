@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => {
     },
   };
 });
-const NavItems = () => {
+const NavItems = ({ className }) => {
   const styles = useStyles();
   const navItems = [
     {
@@ -39,7 +39,7 @@ const NavItems = () => {
   ];
 
   return (
-    <Container maxWidth="xl" sx={{ display: "flex" }}>
+    <Container className={className} maxWidth="xl" sx={{ display: "flex" }}>
       <Box display="flex" flexDirection="row" sx={{ flexGrow: 1 }}>
         {navItems.map((navItem) => {
           return <MenuButton menuItem={navItem} />;
