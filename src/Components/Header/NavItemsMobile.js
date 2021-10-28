@@ -8,6 +8,7 @@ import {
   Popover,
   Typography,
 } from "@mui/material";
+import MenuButtonMobile from "./menuButtonMobile";
 const NavItemsMobile = ({ className }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -17,6 +18,20 @@ const NavItemsMobile = ({ className }) => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const navItems = [
+    {
+      heading: "Product",
+      listItems: ["Pricing", "Marketplace", "Features", "Integrations"],
+    },
+    {
+      heading: "Company",
+      listItems: ["About", "Team", "Blog", "Careers"],
+    },
+    {
+      heading: "Connect",
+      listItems: ["Contact", "Newsletter", "LinkedIn"],
+    },
+  ];
   return (
     <Container
       className={className}
@@ -27,6 +42,8 @@ const NavItemsMobile = ({ className }) => {
         alignItems: "right",
         justifyContent: "flex-end",
         position: "relative !important",
+        padding: 0,
+        margin: 0,
       }}
     >
       <IconButton
@@ -38,33 +55,6 @@ const NavItemsMobile = ({ className }) => {
       >
         <img src="./images/icon-hamburger.svg" alt="" />
       </IconButton>
-      {/* <Menu
-        elevation={0}
-        id="demo-positioned-menu"
-        aria-labelledby="demo-positioned-button"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: "top",
-          horizontal: "left",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "left",
-        }}
-        sx={{
-          position: "absolute",
-          top: "60px",
-          left: "0px",
-          padding: "4rem !important",
-          width: "200px !important",
-        }}
-      >
-        <MenuItem onClick={handleClose}>123</MenuItem>
-        <MenuItem onClick={handleClose}>123</MenuItem>
-        <MenuItem onClick={handleClose}>123</MenuItem>
-      </Menu> */}
       <Popover
         open={open}
         anchorEl={anchorEl}
@@ -75,17 +65,23 @@ const NavItemsMobile = ({ className }) => {
           vertical: "bottom",
           horizontal: "left",
         }}
+        sx={{
+          padding: 0,
+        }}
       >
         <Box
           sx={{
-            width: "100vw",
+            width: "89vw",
             display: "flex",
             flexDirection: "column",
+            alignItems: "center",
+            padding: "1rem !important",
           }}
         >
-          <MenuItem onClick={handleClose}>123</MenuItem>
-          <MenuItem onClick={handleClose}>123</MenuItem>
-          <MenuItem onClick={handleClose}>123</MenuItem>
+          {navItems.map((navItem) => (
+            <MenuButtonMobile item={navItem} />
+          ))}
+          {/* <MenuButtonMobile /> */}
         </Box>
       </Popover>
     </Container>
