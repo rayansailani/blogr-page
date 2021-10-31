@@ -17,14 +17,14 @@ const useStyles = makeStyles((theme) => {
       fontWeight: "600 !important",
       [theme.breakpoints.down("md")]: {
         padding: "0rem 1.2rem",
-        fontSize: "2.6rem !important",
+        fontSize: "2.4rem !important",
       },
     },
     subtitle: {
       color: "white",
       [theme.breakpoints.down("md")]: {
         padding: "0rem 1rem",
-        fontSize: "1.4rem !important",
+        fontSize: "1.2rem !important",
       },
     },
   };
@@ -49,8 +49,8 @@ const Banner = () => {
         A modern publishing platform
       </Typography>
       <Typography
-        variant="body1"
-        className={`${styles.subtitle}`}
+        variant="h4"
+        className={`${styles.subtitle} font-secondary`}
         sx={{ marginBottom: "2rem" }}
         align="center"
       >
