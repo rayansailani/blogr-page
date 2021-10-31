@@ -99,7 +99,7 @@ const NavItemsMobile = ({ className }) => {
         <Divider variant="middle" />
         <Box className={styles.boxContainer}>
           <Button sx={{ color: "#415869 !important" }}>Login</Button>
-          <StyledButton>Sign up</StyledButton>
+          <StyledButton type="redBg">Sign up</StyledButton>
         </Box>
       </Popover>
     </Container>

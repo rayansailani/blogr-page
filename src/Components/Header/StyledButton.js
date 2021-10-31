@@ -44,8 +44,8 @@ const StyledButton = ({ children, type, margins }) => {
         type === "whiteBg"
           ? styles.whiteBg
           : type === "outlinedButton"
-          ? styles.redBg
-          : styles.outlinedButton
+          ? styles.outlinedButton
+          : styles.redBg
       }
     >
       {children}

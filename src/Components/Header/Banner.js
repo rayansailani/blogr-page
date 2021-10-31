@@ -61,7 +61,7 @@ const Banner = () => {
           Start for Free
         </StyledButton>
         {/* <StyledButton type="redBg">Learn More</StyledButton> */}
-        <StyledButton variant="outlinedButton">Learn More</StyledButton>
+        <StyledButton type="outlinedButton">Learn More</StyledButton>
       </div>
     </Box>
   );
