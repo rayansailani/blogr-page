@@ -21,6 +21,17 @@ const useStyles = makeStyles((theme) => {
       border: "none !important",
       textTransform: "capitalize !important",
     },
+    outlinedButton: {
+      color: "white !important",
+      padding: "0.6rem 2rem !important",
+      borderRadius: "26px !important",
+      // border: "none !important",
+      borderColor: "white !important",
+      textTransform: "capitalize !important",
+      "&:hover": {
+        borderColor: "white !important",
+      },
+    },
   };
 });
 const StyledButton = ({ children, type, margins }) => {
@@ -29,7 +40,13 @@ const StyledButton = ({ children, type, margins }) => {
     <Button
       sx={{ marginRight: margins ? "2rem" : "0rem" }}
       variant="outlined"
-      className={type === "whiteBg" ? styles.whiteBg : styles.redBg}
+      className={
+        type === "whiteBg"
+          ? styles.whiteBg
+          : type === "outlinedButton"
+          ? styles.redBg
+          : styles.outlinedButton
+      }
     >
       {children}
     </Button>

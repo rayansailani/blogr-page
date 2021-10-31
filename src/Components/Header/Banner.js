@@ -60,7 +60,8 @@ const Banner = () => {
         <StyledButton margins type="whiteBg">
           Start for Free
         </StyledButton>
-        <StyledButton type="redBg">Learn More</StyledButton>
+        {/* <StyledButton type="redBg">Learn More</StyledButton> */}
+        <StyledButton variant="outlinedButton">Learn More</StyledButton>
       </div>
     </Box>
   );
