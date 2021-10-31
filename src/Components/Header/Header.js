@@ -2,6 +2,7 @@ import React from "react";
 import { Typography, Box, AppBar, Toolbar, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import NavBar from "./NavBar";
+import Banner from "./Banner";
 const useStyles = makeStyles((theme) => {
   return {
     header: {
@@ -15,8 +16,9 @@ const useStyles = makeStyles((theme) => {
       backgroundRepeat: "no-repeat",
       objectFit: "cover",
       [theme.breakpoints.down("md")]: {
-        backgroundSize: "80rem !important",
-        backgroundPosition: "20% center  !important",
+        backgroundSize: "110rem !important",
+        backgroundPosition: "35% center  !important",
+        minHeight: "90vh",
       },
     },
   };
@@ -26,6 +28,7 @@ const Header = () => {
   return (
     <Box className={classes.header}>
       <NavBar />
+      <Banner />
     </Box>
   );
 };

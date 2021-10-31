@@ -9,6 +9,7 @@ import {
   Paper,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import StyledButton from "./StyledButton";
 import MenuButton from "./menuButton";
 const useStyles = makeStyles((theme) => {
   return {
@@ -18,14 +19,6 @@ const useStyles = makeStyles((theme) => {
     },
     dropDownCommon: {
       display: "none",
-    },
-    loginButton: {
-      color: "hsl(356, 100%, 66%)  !important",
-      padding: "0.6rem 2rem !important",
-      background: "white !important",
-      borderRadius: "20px !important",
-      border: "none !important",
-      textTransform: "capitalize !important",
     },
   };
 });
@@ -58,9 +51,7 @@ const NavItems = ({ className }) => {
         <Button sx={{ mr: 2, color: "white", textTransform: "capitalize" }}>
           Login
         </Button>
-        <Button variant="outlined" className={styles.loginButton}>
-          Sign Up
-        </Button>
+        <StyledButton type="whiteBg">Sign Up</StyledButton>
       </Box>
     </Container>
   );

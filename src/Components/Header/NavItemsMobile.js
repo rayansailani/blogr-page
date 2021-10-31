@@ -11,7 +11,7 @@ import {
   Button,
 } from "@mui/material";
 import MenuButtonMobile from "./menuButtonMobile";
-
+import StyledButton from "./StyledButton";
 const useStyles = makeStyles((theme) => {
   return {
     boxContainer: {
@@ -20,15 +20,6 @@ const useStyles = makeStyles((theme) => {
       flexDirection: "column",
       alignItems: "center !important",
       padding: "1rem !important",
-    },
-    loginButton: {
-      color: "white !important",
-      padding: "0.6rem 2rem !important",
-      background:
-        "linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%))",
-      borderRadius: "20px !important",
-      border: "none !important",
-      textTransform: "capitalize !important",
     },
   };
 });
@@ -108,18 +99,7 @@ const NavItemsMobile = ({ className }) => {
         <Divider variant="middle" />
         <Box className={styles.boxContainer}>
           <Button sx={{ color: "#415869 !important" }}>Login</Button>
-          <Button
-            variant="outlined"
-            className={styles.loginButton}
-            // sx={{
-            //   color: "white",
-            //   background:
-            //     "linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%))",
-            //   borderRadius: "20px",
-            // }}
-          >
-            Sign up
-          </Button>
+          <StyledButton>Sign up</StyledButton>
         </Box>
       </Popover>
     </Container>
