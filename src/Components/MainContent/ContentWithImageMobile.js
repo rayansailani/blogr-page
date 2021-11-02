@@ -5,7 +5,7 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles((theme) => {
   return {
     flexContainer: {
-      // overflowX: "clip",
+      overflowX: "clip",
       marginTop: "28px !important",
       display: "flex !important",
       flexDirection: "column !important",
