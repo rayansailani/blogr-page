@@ -25,7 +25,7 @@ const ContentWithImageMobile = ({ info, className }) => {
   return (
     <Box className={[className, styles.flexContainer]}>
       <div className={[styles.imageContainer]}>
-        <img src={`${info["imgURL"]}mobile.svg`} />
+        <img height="300" src={`${info["imgURL"]}mobile.svg`} />
       </div>
       <div className={[styles.textContainer]}>
         <Typography
