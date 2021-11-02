@@ -7,3 +7,16 @@
 .font-secondary {
   font-family: "Overpass", sans-serif !important;
 }
+
+.text-bold-600 {
+  font-weight: bold !important;
+}
+.very-dark-blue {
+  color: hsl(208, 49%, 24%) !important;
+}
+.very-dark-grayish-blue {
+  color: hsl(207, 13%, 34%);
+}
+.text-bold-300 {
+  font-weight: 300 !important;
+}
