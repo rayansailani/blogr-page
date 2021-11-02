@@ -3,6 +3,8 @@ import { Container, Typography, Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import ContentWithImage from "./ContentWithImage";
 import ContentWithImageMobile from "./ContentWithImageMobile";
+import StyledContent from "./StyledContent";
+
 const useStyles = makeStyles((theme) => {
   return {
     mainContentDesktop: {
@@ -61,10 +63,12 @@ const MainContent = () => {
         align="left"
         className={styles.mainContentDesktop}
       />
+
       <ContentWithImageMobile
         info={contentInfo[0]}
         className={styles.mobileContent}
       />
+      <StyledContent />
       <ContentWithImage
         info={contentInfo[1]}
         align="right"
