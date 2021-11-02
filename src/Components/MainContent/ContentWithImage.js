@@ -96,4 +96,3 @@ const ContentWithImage = (props) => {
   );
 };
 export default ContentWithImage;
-// public\images\illustration-editor-desktop.svg
