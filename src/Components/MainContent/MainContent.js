@@ -49,7 +49,15 @@ const MainContent = () => {
     },
   ];
   return (
-    <div maxWidth="xl" sx={{ margin: "0", padding: "0", width: "100vw" }}>
+    <div
+      maxWidth="xl"
+      sx={{
+        margin: "0",
+        padding: "0",
+        width: "100vw",
+        overflowX: "clip !important",
+      }}
+    >
       <Typography
         variant="h4"
         className={["font-secondary", "text-bold-600", "very-dark-blue"]}
