@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => {
       maxHeight: "100vw",
       maxWidth: "100vw !important",
       [theme.breakpoints.down("sm")]: {
-        margin: "14rem 0 !important",
+        margin: "50vh 0 !important",
         flexDirection: "column !important",
         justifyContent: "space-evenly !important",
       },
@@ -37,19 +37,20 @@ const useStyles = makeStyles((theme) => {
         backgroundSize: "100%",
         backgroundPosition: "center -30% !important",
         height: "130vh !important",
-        top: "-1000",
+        top: "-900",
         // minHeight: "100vh !important",
       },
     },
     textContainer: {
-      padding: "10rem",
+      padding: "5vw",
       [theme.breakpoints.down("sm")]: {
         padding: "4rem",
+
         // width: "100vw !important",
       },
     },
     imageContainer: {
-      padding: "0rem 4rem",
+      padding: "0rem 5vw",
       [theme.breakpoints.down("sm")]: {
         padding: "0rem 0rem",
       },
