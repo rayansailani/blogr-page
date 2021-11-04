@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => {
         backgroundSize: "100%",
         backgroundPosition: "center -30% !important",
         height: "130vh !important",
-        top: "-900",
+        top: "-1000 !important",
         // minHeight: "100vh !important",
       },
     },
