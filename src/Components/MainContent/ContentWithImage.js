@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => {
       position: "absolute",
       top: "5rem",
       right: (props) => {
-        return props.align === "left" ? "-10vw !important" : "69vw !important";
+        return props.align === "left" ? "-10vw !important" : "70vw !important";
       },
     },
     textContainer: {

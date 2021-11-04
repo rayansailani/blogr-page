@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => {
       background: "hsl(240, 10%, 16%)",
       marginTop: "20vh",
       borderRadius: "0 2rem 0 0",
+      maxWidth: "100vw !important",
     },
     footerInside: {
       padding: "3rem 0 !important",
